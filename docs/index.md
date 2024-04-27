@@ -1,0 +1,2 @@
+- [Структура проекта](../docs/project.md)
+- [Работа с api](../docs/api.md)
