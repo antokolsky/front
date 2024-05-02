@@ -4,7 +4,7 @@ import type { AxiosInstance } from "axios";
 
 export interface IApi {
 	auth: Auth;
-	_request: AxiosInstance;
+	request: AxiosInstance;
 }
 
 export type Module = {

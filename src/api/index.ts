@@ -23,7 +23,7 @@ export class Api implements IApi {
 	}
 
 	auth = <Auth>{};
-	_request = instance;
+	request = instance;
 }
 
 export default new Api();
