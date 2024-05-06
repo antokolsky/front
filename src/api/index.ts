@@ -12,7 +12,7 @@ const registerApi = (api: IApi) => {
 		eager: true,
 	});
 
-	Object.entries<Module>(services).forEach(([path, definition]) => {
+	Object.entries<Module>(services).forEach(([_path, definition]) => {
 		definition.default(api);
 	});
 };

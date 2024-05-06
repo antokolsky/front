@@ -8,12 +8,12 @@ const App = () => {
 		{
 			key: "lq",
 			label: "Low quality",
-			children: <Model link="../../../cube.stl" />,
+			children: <Model link="@/models/cube.stl" />,
 		},
 		{
 			key: "hq",
 			label: "Hight quality",
-			children: <Model link="../../../halloween_lq.stl" />,
+			children: <Model link="@/models/cube.stl" />,
 		},
 	];
 
