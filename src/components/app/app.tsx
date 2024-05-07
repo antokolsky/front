@@ -1,6 +1,5 @@
 import "@utils/localization/i18next";
 import { useTranslation } from "react-i18next";
-import "@utils/localization/i18next.ts";
 
 const languages = {
 	en: "English",
