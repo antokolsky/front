@@ -8,6 +8,11 @@ i18next
   .use(LanguageDetector)
   .use(Backend)
   .init({
-    // debug: true, // REMOVE
+    debug: true, // REMOVE
     fallbackLng: 'en',
+    load: 'languageOnly',
+    ns: ['translation', 'ui'],
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    }
   });

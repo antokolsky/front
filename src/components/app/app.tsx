@@ -11,7 +11,7 @@ const App = () => {
 
 	return (
 		<div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-			<h1>{t("textHello")}</h1>
+			<h1>{t("textHello", { ns: 'translation' })}</h1>
 			<div style={{ display: "flex", gap: "10px" }}>
 				{Object.entries(languages).map(([lng, name]) => (
 					<button
@@ -23,10 +23,10 @@ const App = () => {
 					</button>
 				))}
 			</div>
-			<p>{t("text")}</p>
+			<p>{t("text", { ns: 'translation' })}</p>
 			<div style={{ display: "flex", gap: "10px" }}>
-				<button>{t("buttonOk")}</button>
-				<button>{t("buttonCancel")}</button>
+				<button>{t("ui:buttonOk")}</button>
+				<button>{t("buttonCancel", { ns: 'ui' })}</button>
 			</div>
 		</div>
 	);
