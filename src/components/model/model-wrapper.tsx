@@ -6,7 +6,6 @@ import {
 	AccumulativeShadows,
 	RandomizedLight,
 } from "@react-three/drei";
-import { EffectComposer, N8AO } from "@react-three/postprocessing";
 import Model from "./model";
 
 interface Props {
@@ -37,9 +36,6 @@ export const ModelWrapper: FC<Props> = (props) => {
 				<RandomizedLight radius={6} position={[-10, 5, 5]} />
 			</AccumulativeShadows>
 			<OrbitControls makeDefault />
-			<EffectComposer enableNormalPass>
-				<N8AO aoRadius={0.5} intensity={3} />
-			</EffectComposer>
 		</Canvas>
 	);
 };

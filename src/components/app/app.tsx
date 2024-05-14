@@ -1,21 +1,8 @@
-import { Flex, Layout, Tabs, Row } from "antd";
+import { Flex, Layout } from "antd";
 import Model from "@/components/model";
 
 const App = () => {
 	const { Header, Footer, Content } = Layout;
-
-	const tabs = [
-		{
-			key: "lq",
-			label: "Low quality",
-			children: <Model link="./cube.stl" />,
-		},
-		{
-			key: "hq",
-			label: "Hight quality",
-			children: <Model link="./cube.stl" />,
-		},
-	];
 
 	return (
 		<Flex style={{ height: "100%" }}>
@@ -27,9 +14,9 @@ const App = () => {
 						justifyContent: "center",
 					}}
 				>
-					<Row style={{ maxWidth: "1000px", width: "100%" }}>
-						<Tabs items={tabs} style={{ width: "100%" }} />
-					</Row>
+					<div style={{ width: "1000px" }}>
+						<Model link="./cube.stl" />
+					</div>
 				</Content>
 				<Footer></Footer>
 			</Layout>
