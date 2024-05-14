@@ -19,8 +19,9 @@ export const ModelWrapper: FC<Props> = (props) => {
 			<color attach="background" args={["#d0d0d0"]} />
 			<ambientLight intensity={0.25} />
 			<spotLight
-				position={[-10, 5, 5]}
-				angle={0.2}
+				intensity={100}
+				position={[-5, 5, 5]}
+				angle={Math.PI / 4}
 				penumbra={1}
 				castShadow
 				shadow-mapSize={1024}
