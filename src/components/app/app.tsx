@@ -14,12 +14,12 @@ const App = () => {
 						justifyContent: "center",
 					}}
 				>
-					<div style={{ maxWidth: "1000px", width: '100%', height: '100%', display: 'flex'}}>
-						<div style={{ width: "50%" }}>
-							<p>Model is on the right</p>
+					<div style={{ maxWidth: "1000px", width: '100%', height: '100%', display: 'flex', gap: '1rem'}}>
+					<div style={{ maxHeight: "500px", width: "50%", height: '50%' }}>
+							<Model link="./cube.stl" />
 						</div>
 						<div style={{ maxHeight: "500px", width: "50%", height: '50%' }}>
-							<Model link="./cube.stl" />
+							<Model link="./cube.stl" rotateModel/>
 						</div>
 					</div>
 				</Content>
