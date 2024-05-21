@@ -15,7 +15,7 @@ const App = () => {
 					}}
 				>
 					<div style={{ width: "1000px" }}>
-						<Model link="./cube.stl" />
+						<Model link="./vest.stl" />
 					</div>
 				</Content>
 				<Footer></Footer>
