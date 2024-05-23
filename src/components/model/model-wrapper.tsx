@@ -1,31 +1,38 @@
 import { FC, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-	Center,
-	OrbitControls,
-	AccumulativeShadows,
-	RandomizedLight,
-} from "@react-three/drei";
+import { Center, OrbitControls } from "@react-three/drei";
 import Model from "./model";
+import { SpotLight } from "three";
 
 interface Props {
 	link: string;
 }
 
+const light = new SpotLight();
+light.intensity = 100;
+light.angle = Math.PI / 4;
+light.penumbra = 1;
+light.castShadow = true;
+light.shadow;
+
 export const ModelWrapper: FC<Props> = (props) => {
 	return (
 		<Suspense fallback={<h2>🌀 Loading...</h2>}>
-			<Canvas shadows camera={{ position: [6, 4, 8], fov: 35 }}>
+			<Canvas
+				/* camera={{ position: [6, 4, 8], fov: 35 }} */
+				onCreated={({ camera, scene }) => {
+					light.position.set(
+						camera.position.x,
+						camera.position.y,
+						camera.position.z
+					);
+					camera.add(light);
+					scene.add(camera);
+					console.log("init light", light.position);
+					console.log("init camera", camera.position);
+				}}
+			>
 				<color attach="background" args={["#d0d0d0"]} />
-				<ambientLight intensity={0.25} />
-				<spotLight
-					intensity={100}
-					position={[-5, 5, 5]}
-					angle={Math.PI / 4}
-					penumbra={1}
-					castShadow
-					shadow-mapSize={1024}
-				/>
 				<Center top>
 					<Model
 						scale={0.05}
@@ -33,9 +40,6 @@ export const ModelWrapper: FC<Props> = (props) => {
 						link={props.link}
 					/>
 				</Center>
-				<AccumulativeShadows temporal frames={100}>
-					<RandomizedLight radius={6} position={[-10, 5, 5]} />
-				</AccumulativeShadows>
 				<OrbitControls makeDefault />
 			</Canvas>
 		</Suspense>
