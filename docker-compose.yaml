@@ -29,7 +29,7 @@ services:
   
   frontend:
     container_name: frontend_container
-    image: databorodata/antokolsky_frontend:latest
+    image: databorodata/antokolsky_front:latest
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_backend:/frontend_static
