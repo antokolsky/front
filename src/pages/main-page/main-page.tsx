@@ -1,9 +1,9 @@
-import { Button } from "@gravity-ui/uikit";
+import About from "@/components/section/main-page/about/about";
 
 const MainPage = () => {
 	return (
 		<div>
-			<Button view="action">Кнопка</Button>
+			<About />
 		</div>
 	);
 };

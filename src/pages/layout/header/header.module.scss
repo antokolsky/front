@@ -1,0 +1,30 @@
+.header {
+	@include container;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	background-color: $sand;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+
+	&__list {
+		list-style: none;
+		display: flex;
+
+		li {
+			margin-left: 150px;
+		}
+	}
+}
+
+.link {
+	@include a;
+}
