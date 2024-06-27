@@ -1,0 +1,38 @@
+.about {
+	@include container;
+	padding: 140px 0 290px 0;
+	//TODO Надо подумать над расположением данного изображения
+	background-image: url("@/assets/images/antokolsky.png");
+	background-repeat: no-repeat;
+	background-size: 800px 800px;
+	background-position: top right;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-right: auto;
+	max-width: 690px;
+
+	&__info {
+		.title {
+			font-weight: 800;
+			font-size: 50px;
+			line-height: 70px;
+			font-family: "Roboto flex", sans-serif;
+			color: $sand;
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			font-weight: 800;
+			font-size: 50px;
+			line-height: 70px;
+			font-family: "Roboto flex", sans-serif;
+			text-transform: uppercase;
+			color: $white;
+			text-shadow: 1px 1px 0 $sand, -1px 1px 0 $sand, -1px -1px 0 $sand,
+				1px -1px 0 $sand;
+		}
+	}
+}
