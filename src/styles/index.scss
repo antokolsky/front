@@ -1,5 +1,3 @@
-@import "./common/index.scss";
-
 * {
 	margin: 0;
 	padding: 0;
@@ -15,4 +13,6 @@ body,
 
 #root {
 	background-color: $dark;
+	display: flex;
+	flex-direction: column;
 }

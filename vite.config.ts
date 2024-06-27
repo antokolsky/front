@@ -4,27 +4,27 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: "./build",
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData:
-          "@import './src/styles/variables.scss'; @import './src/styles/mixins.scss';",
-      },
-    },
-    modules: {
-      localsConvention: "dashes",
-    },
-  },
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-  },
-  server: {
-    port: 3000,
-  },
+	plugins: [react()],
+	build: {
+		outDir: "./build",
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData:
+					"@import './src/styles/variables.scss'; @import './src/styles/mixins/index.scss';",
+			},
+		},
+		modules: {
+			localsConvention: "dashes",
+		},
+	},
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "src"),
+		},
+	},
+	server: {
+		port: 3000,
+	},
 });
