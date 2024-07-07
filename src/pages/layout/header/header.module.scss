@@ -1,8 +1,11 @@
+.dark-wrapper {
+	@include darkWrapper();
+}
+
 .header {
 	@include container;
 	display: flex;
 	align-items: center;
-	background-color: $dark;
 }
 
 .logo {

@@ -3,3 +3,11 @@
 	width: 100%;
 	max-width: 1410px;
 }
+
+@mixin darkWrapper() {
+	background-color: $dark;
+}
+
+@mixin whiteWrapper() {
+	background-color: $white;
+}

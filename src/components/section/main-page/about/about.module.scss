@@ -1,3 +1,7 @@
+.dark-wrapper {
+	@include darkWrapper();
+}
+
 .about {
 	@include container;
 	padding: 140px 0 290px 0;
