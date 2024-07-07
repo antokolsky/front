@@ -1,11 +1,7 @@
 .about {
 	@include container;
 	padding: 140px 0 290px 0;
-	//TODO Надо подумать над расположением данного изображения
-	background-image: url("@/assets/images/antokolsky.png");
-	background-repeat: no-repeat;
-	background-size: 800px 800px;
-	background-position: top right;
+	background-color: $dark;
 }
 
 .content {
