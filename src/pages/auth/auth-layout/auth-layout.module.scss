@@ -1,0 +1,7 @@
+.wrapper {
+	@include darkWrapper();
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
