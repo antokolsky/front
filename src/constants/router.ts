@@ -13,9 +13,9 @@ export const PATH = {
 	AUTH: "/auth",
 
 	/**
-	 * Страница регистрации: "/register"
+	 * Страница регистрации: "/registration"
 	 */
-	REGISTER: "register",
+	REGISTRATION: "registration",
 
 	/**
 	 * Страница для отладки компонентов: "/test"

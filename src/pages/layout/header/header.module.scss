@@ -30,5 +30,6 @@
 }
 
 .link {
-	@include a;
+	@include a(20px);
+	color: $white;
 }
