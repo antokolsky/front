@@ -10,9 +10,14 @@ lerna-debug.log*
 node_modules
 build
 dist
+build
+/src/models
 dist-ssr
 *.local
 .env
+cube*
+vest*
+porsche*
 
 # Editor directories and files
 .vscode/*
