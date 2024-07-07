@@ -1,0 +1,18 @@
+.wrapper {
+	padding: 50px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: $white;
+}
+
+.title {
+	text-align: center;
+}
+
+.link {
+	@include a(14px);
+	color: $dark;
+	text-align: center;
+}

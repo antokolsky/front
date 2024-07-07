@@ -1,0 +1,39 @@
+.dark-wrapper {
+	@include darkWrapper();
+}
+
+.about {
+	@include container;
+	padding: 140px 0 290px 0;
+	background-color: $dark;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-right: auto;
+	max-width: 690px;
+
+	&__info {
+		.title {
+			font-weight: 800;
+			font-size: 50px;
+			line-height: 70px;
+			font-family: "Roboto flex", sans-serif;
+			color: $sand;
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			font-weight: 800;
+			font-size: 50px;
+			line-height: 70px;
+			font-family: "Roboto flex", sans-serif;
+			text-transform: uppercase;
+			color: $white;
+			/* TODO Если в макет не вернется контур, убрать этот кусок стилей */
+			/* text-shadow: 1px 1px 0 $sand, -1px 1px 0 $sand, -1px -1px 0 $sand,
+				1px -1px 0 $sand; */
+		}
+	}
+}

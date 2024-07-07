@@ -1,26 +1,12 @@
-import { Flex, Layout } from "antd";
-import Model from "@/components/model";
+import { FC } from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "@/router/router";
 
-const App = () => {
-	const { Header, Footer, Content } = Layout;
-
+const App: FC = () => {
 	return (
-		<Flex style={{ height: "100%" }}>
-			<Layout>
-				<Header></Header>
-				<Content
-					style={{
-						display: "flex",
-						justifyContent: "center",
-					}}
-				>
-					<div style={{ width: "1000px" }}>
-						<Model link="./vest.stl" />
-					</div>
-				</Content>
-				<Footer></Footer>
-			</Layout>
-		</Flex>
+		<>
+			<RouterProvider router={router} />
+		</>
 	);
 };
 
