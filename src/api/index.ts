@@ -3,9 +3,13 @@ import axios from "axios";
 import type { IApi, Module } from "@/types/api/api-types";
 import { Auth } from "@/types/api/services";
 
+const env = import.meta.env;
+
 const instance = axios.create({
-	baseURL: import.meta.env.BASE_URL,
+	baseURL: `${env.VITE_BASE_URL}${env.VITE_PROJECT}/`,
 });
+
+console.log(`${env.VITE_BASE_URL}${env.VITE_PROJECT}/`);
 
 const registerApi = (api: IApi) => {
 	const services = import.meta.glob<Module>("./services/*.service.ts", {

@@ -10,9 +10,3 @@
 .title {
 	text-align: center;
 }
-
-.link {
-	@include a(14px);
-	color: $dark;
-	text-align: center;
-}

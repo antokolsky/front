@@ -7,6 +7,7 @@ import TestPage from "@/pages/test-page/test-page";
 /* Страницы авторизации */
 import AuthLayout from "@/pages/auth/auth-layout";
 import Authorization from "@/pages/auth/authorization/authorization";
+import Registration from "@/pages/auth/registration/registration";
 
 export const router = createBrowserRouter([
 	{
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Authorization />,
+			},
+			{
+				path: PATH.REGISTRATION,
+				element: <Registration />,
 			},
 		],
 	},

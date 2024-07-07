@@ -1,6 +1,5 @@
-@mixin a {
+@mixin a($fz) {
 	text-decoration: none;
-	color: $white;
-	font-size: 20px;
+	font-size: $fz;
 	line-height: 100%;
 }
