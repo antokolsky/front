@@ -31,8 +31,9 @@
 			font-family: "Roboto flex", sans-serif;
 			text-transform: uppercase;
 			color: $white;
-			text-shadow: 1px 1px 0 $sand, -1px 1px 0 $sand, -1px -1px 0 $sand,
-				1px -1px 0 $sand;
+			/* TODO Если в макет не вернется контур, убрать этот кусок стилей */
+			/* text-shadow: 1px 1px 0 $sand, -1px 1px 0 $sand, -1px -1px 0 $sand,
+				1px -1px 0 $sand; */
 		}
 	}
 }

@@ -1,4 +1,4 @@
-import About from "@/components/section/main-page/about/about";
+import About from "@/components/sections/main-page/about/about";
 
 const MainPage = () => {
 	return (
