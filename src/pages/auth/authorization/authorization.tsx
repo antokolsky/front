@@ -1,4 +1,3 @@
-import { TextInput, Button, Text } from "@gravity-ui/uikit";
 import { NavLink } from "react-router-dom";
 import { PATH } from "@/constants/router";
 import style from "./authorization.module.scss";
@@ -8,14 +7,14 @@ const Authorization = () => {
 
 	return (
 		<div className={style.wrapper}>
-			<Text variant="header-1" className={style.title}>
+			{/* <Text variant="header-1" className={style.title}>
 				Авторизация
-			</Text>
-			<TextInput size="l" label="email" />
+			</Text> */}
+			{/* <TextInput size="l" label="email" />
 			<TextInput size="l" label="password" />
 			<Button size="l" view="action">
 				Войти
-			</Button>
+			</Button> */}
 			<NavLink to={PATH.REGISTRATION} className={style.link}>
 				Зарегистрироваться
 			</NavLink>
