@@ -2,7 +2,6 @@ import { FC, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import { SpotLight } from "three";
-import { Button, Space, Switch } from "antd";
 import Model from "./model";
 import style from "./model-wrapper.module.scss";
 
@@ -18,17 +17,8 @@ light.castShadow = true;
 light.shadow;
 
 export const ModelWrapper: FC<Props> = (props) => {
-	const [center, setCenter] = useState(false);
-	const [polygon, setPolygon] = useState(false);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [loaded, setLoaded] = useState(false);
-
-	function setPolygonHandler(change: boolean) {
-		setPolygon(change);
-	}
-
-	function setCenterHandler() {
-		setCenter(!center);
-	}
 
 	function setLoadedHandler(state: boolean) {
 		setLoaded(state);
@@ -37,18 +27,6 @@ export const ModelWrapper: FC<Props> = (props) => {
 	return (
 		<Suspense fallback={<h2>🌀 Loading...</h2>}>
 			<div className={style.wrapper}>
-				{loaded && (
-					<Space className={style.control}>
-						<Space>
-							Set polygons
-							<Switch
-								value={polygon}
-								onChange={setPolygonHandler}
-							/>
-						</Space>
-						<Button onClick={setCenterHandler}>Center</Button>
-					</Space>
-				)}
 				<Canvas
 					onCreated={({ camera, scene }) => {
 						light.position.set(
