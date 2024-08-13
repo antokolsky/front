@@ -17,7 +17,6 @@ light.castShadow = true;
 light.shadow;
 
 export const ModelWrapper: FC<Props> = (props) => {
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [, setLoaded] = useState(false);
 
 	function setLoadedHandler(state: boolean) {
