@@ -1,0 +1,6 @@
+TODO:
+1-Если изображение не сделают обязательным сделать скелет, временое решение {aboutDe.photos??""} 
+src\components\projectCard\projectCard.tsx
+2- может перейти только если авторизован navigate(PATH.MAIN.PROFILE.CREATPROJECT) 
+src\components\sections\main-page\myProject\myProject.tsx
+3-

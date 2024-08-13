@@ -1,4 +1,4 @@
 export interface TokenObtainPair {
-	email: string;
-	password: string;
+	refresh: string;
+	access: string;
 }

@@ -1,0 +1,22 @@
+.avatar{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.icon{
+    background-color: $dark-grey;
+    width: 70px;
+    height: 70px;
+
+}
+.img{
+    width: 254px;
+    height: 254px;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+}

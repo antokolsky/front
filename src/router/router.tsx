@@ -1,4 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	Route,
+} from "react-router-dom";
 import { PATH } from "@/constants/router";
 /* Главная страница */
 import Layout from "@/pages/layout/";
@@ -9,33 +13,20 @@ import AuthLayout from "@/pages/auth/auth-layout";
 import Authorization from "@/pages/auth/authorization/authorization";
 import Registration from "@/pages/auth/registration/registration";
 
-export const router = createBrowserRouter([
-	{
-		path: PATH.MAIN,
-		element: <Layout />,
-		children: [
-			{
-				index: true,
-				element: <MainPage />,
-			},
-		],
-	},
-	{
-		path: PATH.AUTH,
-		element: <AuthLayout />,
-		children: [
-			{
-				index: true,
-				element: <Authorization />,
-			},
-			{
-				path: PATH.REGISTRATION,
-				element: <Registration />,
-			},
-		],
-	},
-	{
-		path: PATH.TEST,
-		element: <TestPage />,
-	},
-]);
+export const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route>
+			<Route path={PATH.MAIN.MAIN} element={<Layout />}>
+				<Route element={<MainPage />} index={true} />
+			</Route>
+
+			<Route path={PATH.AUTH.AUTH} element={<AuthLayout />}>
+				<Route index={true} element={<Authorization />} />
+				<Route
+					path={PATH.AUTH.REGISTRATION}
+					element={<Registration />} />
+			</Route>
+				<Route path={PATH.TEST} element={<TestPage />} />
+		</Route>
+	)
+);

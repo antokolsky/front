@@ -1,0 +1,8 @@
+.link{
+    color: unset;
+    font-style: unset;
+    text-decoration: unset;
+    &:hover{
+        color: $gray;
+    }
+}

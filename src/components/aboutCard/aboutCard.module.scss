@@ -1,0 +1,23 @@
+
+.contaner{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 330px;
+    height: 350px;
+    padding-right: 10px;
+    padding-top: 20px ;
+    padding-left: 20px;
+    background-color: $gray;
+    row-gap: 30px;
+    color: $white;
+
+  line-height: 36px;
+
+}
+.headingCn{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  
+}

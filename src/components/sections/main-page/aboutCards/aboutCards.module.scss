@@ -1,0 +1,16 @@
+.darkWrapper {
+	@include darkWrapper();
+}
+
+.contaner {
+	@include container;
+	padding: 140px 0 290px 0;
+	background-color: $dark;
+}
+.gridCardWidth{
+    margin-top: 28px;
+    width: 1410px;
+}
+.headers{
+    color: $sand;
+}
