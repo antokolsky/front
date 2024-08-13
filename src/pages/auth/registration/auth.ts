@@ -19,7 +19,7 @@ const auth = () => {
 		}
 
 	async	authVerify():Promise<boolean> {
-			const { access,refresh } = storage.getToken();
+			const { access } = storage.getToken();
 			if (access === null) {
 				throw "access === null";
 			}

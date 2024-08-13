@@ -15,7 +15,7 @@ const Authorization = () => {
 			<Button size="l" view="action">
 				Войти
 			</Button> */}
-			<NavLink to={PATH.REGISTRATION} className={style.link}>
+			<NavLink to={PATH.AUTH.REGISTRATION} className={style.link}>
 				Зарегистрироваться
 			</NavLink>
 		</div>
