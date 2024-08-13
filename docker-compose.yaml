@@ -45,6 +45,21 @@ services:
       - backend
       - postgres
 
+
+
+dashboard:
+    container_name: dashboard
+    image: dashboard
+    depends_on:
+      - postgres
+    build:
+      context: ../../packages/dashboard
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../../packages/dashboard:/app
+      - node_modules:/app/node_modules
 volumes:
-  postgres_data:
-  static_backend:
+  pgdata: {}
+  node_modules: {}
