@@ -7,6 +7,6 @@ const Link: FC<Props> = (props) => {
 	const {  children,to, className, ...rest } = props;
 	const linkCn = cn(style.link, className);
 	return <LinkRoute to={to} className={linkCn} {...rest}>{children}</LinkRoute>;
-	4;
+
 };
 export default Link;
