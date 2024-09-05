@@ -1,0 +1,67 @@
+.pagination{
+    display: flex;
+    min-width: 168px;
+    column-gap: 8px;
+    justify-content: center;
+}
+
+.button{
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+    margin: 0;
+    height: 28px;
+    width: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    transition:background-color 0.3s ;
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.37);
+    }
+}   
+.selected{
+    background-color: #ffbe5c42;
+    color: #BD5C0A;
+    &:hover{
+        background-color: #ffbe5cb2;;
+    }
+}
+.leftAndRight{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0000001A;
+    height: 28px;
+        width: 28px;
+
+    &::before{
+        content: " ";
+        height: 14px;
+        width: 18px;
+        display: inline-block;
+        align-items: center;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size:  6px 10.6px;
+    }
+
+}
+.left{
+    &::before{
+        background-image: url("/src/assets/icons/paginationLeft.svg");
+
+
+    }
+}
+.right{
+    
+    &::before{
+        background-image: url("/src/assets/icons/paginationRight.svg");
+
+    }
+}

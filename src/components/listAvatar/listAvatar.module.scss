@@ -1,0 +1,19 @@
+.listAvatar{
+    display: flex;
+    column-gap: 82px;
+}
+.alignment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 18px;
+}
+.userName{
+color: $sand;
+font-size: 24px;
+font-weight: 700px;
+
+}
+.description{
+    color: white;
+}

@@ -1,0 +1,41 @@
+.contanerDark{
+width: 100%;
+padding-top: 264px;
+padding-bottom: 105px;
+background-color: $dark;
+color:white
+}
+.footer{
+    max-width: 1411px;
+    display: flex;
+    column-gap: 80px;
+    row-gap: 115px;
+    flex-wrap: wrap;
+    margin: 0 auto 0 auto;
+    padding-left: 364px;
+
+}
+.svgList{
+    display: flex;
+    column-gap: 10px;
+}
+.socialSvg{
+    width: 36px;
+    height: 36px;
+    background-color: #D9D9D9;
+    border-radius: 100px;
+}
+.headerFooter{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 41px;
+}
+.rowMarginTopX1{
+margin-top: 44px;
+}
+.rowMarginTopX2{
+margin-top: 28px;
+}
+.rowMarginTopX3{
+    margin-top: 108px;
+    }

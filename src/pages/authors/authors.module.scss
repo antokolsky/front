@@ -1,0 +1,44 @@
+.darkBack{
+    background-color: $dark;
+display: flex;    
+height: 100%;
+}
+.contaner{
+    margin: 116px auto 140px;
+    max-width: 1410px;
+}
+.catalog{
+    display: flex;
+    column-gap: 139px;
+    margin-bottom: 133px;
+}
+.hrSand{
+    background-color: $sand;
+}
+.columnsGrid{
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    row-gap:100px ;
+    column-gap: 125px;
+    margin-top: 173px;
+}
+.formColor{
+    color: rgb(255, 255, 255);
+    margin-top:128px;
+
+}
+.color{
+    color:white;
+}
+.fromContaner{
+    margin-top:64px;
+
+    
+}
+.headengH1Color{
+    color: $sand;
+    margin-bottom: 96px;
+}
+.pagination{
+    margin-bottom: 130px;
+}

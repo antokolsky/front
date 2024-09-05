@@ -7,8 +7,9 @@ export const PATH = {
 	 */
 	MAIN: {
 		MAIN: "/",
-		PROFILE: {
-			PROFILE: "/users/:userId",
+		USERS: {
+			USERS:"/users",
+			USER: "/users/:userId",
 			MYPROJECTS: "/users/:userId/myProjects",
 			CREATPROJECT: "/users/:userId/myProjects/creatProject"
 		},

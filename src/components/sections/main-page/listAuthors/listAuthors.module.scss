@@ -1,0 +1,66 @@
+.darkBackground{
+    width: 100%;
+    background-color: $dark;
+    display: flex;
+}
+.listAuthors{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 241px 0 160px;
+    column-gap: 114px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.siteName{
+    color: white;
+//styleName: H-1;
+font-family: Roboto Flex;
+font-size: 48px;
+font-weight: 800;
+line-height: 67.2px;
+text-align: left;
+
+
+}
+.authorsName{
+    color: $sand;
+}
+.linkAuthors{
+
+   margin-top: auto;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+column-gap: 10px;
+
+    font-family: Calibri;
+font-size: 32px;
+font-weight: 400;
+line-height: 39.06px;
+text-align: left;
+
+
+    &::after{
+        content: " ";
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        background-image: url("/src/assets/icons/arrowLink.svg");
+        background-size: 21px 21px;
+    }
+    &:hover{
+        filter: invert(0.3);
+
+    }
+}
+.contaner{
+    max-width: 1410px;
+    margin: 0 auto 212px;
+}
+.hrSand{
+    background-color: $sand;
+    
+}

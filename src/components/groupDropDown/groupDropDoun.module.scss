@@ -1,0 +1,9 @@
+.spanView{
+    cursor: pointer;
+  text-decoration: underline;
+opacity: 0.4;
+&:hover{
+opacity: 0.9;
+
+}
+}

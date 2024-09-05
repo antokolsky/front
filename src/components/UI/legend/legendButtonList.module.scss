@@ -1,0 +1,33 @@
+.legendButtonList{
+    display: inline-flex;
+        align-items: center;
+        user-select: none;
+    cursor: pointer;
+    &::after{
+       
+        content: '';
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+       
+        margin-left: auto;
+    }
+}
+
+.open{
+    &::after{
+        background-image: url("/src/assets/icons/–.svg");
+      
+    }
+}
+.close{
+    &::after{
+        background-image: url("/src/assets/icons/+.svg");
+      
+    }
+}

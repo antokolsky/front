@@ -43,4 +43,5 @@
     "vite-plugin-svgr": "^4.2.0"
   },
   "proxy": "http://antokolsky.ddns.net/api"
+  
 }
