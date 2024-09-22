@@ -25,7 +25,6 @@ export const PATH = {
 	 */
 	AUTH: {
 		AUTH:"/auth",
-		
 		/**
 	 * Страница регистрации: "/registration"
 	 */

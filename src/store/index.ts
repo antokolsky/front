@@ -1,13 +1,27 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/counter-slice";
-
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
+import authorizationReducer from "./slices/authorization-slice";
+import { apiSlice } from "@/api/apiSlice";
+import errorReduser from "./slices/error-slice"
 export const store = configureStore({
 	reducer: {
-		counter: counterReducer,
+		authorization: authorizationReducer,
+		error:errorReduser,
+		[apiSlice.reducerPath]: apiSlice.reducer
 	},
+	middleware: getDefaultMiddleware =>
+		getDefaultMiddleware()
+	.concat(apiSlice.middleware)
+	
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch;
+export type AppStore = typeof store
+export type RootState = ReturnType<AppStore['getState']>
+// Infer the `AppDispatch` type from the store itself
+export type AppDispatch = AppStore['dispatch']
+export type AppThunk<ThunkReturnType = void> = ThunkAction<
+  ThunkReturnType,
+  RootState,
+  unknown,
+  Action
+>

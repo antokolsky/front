@@ -5,3 +5,41 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.formWrapper {
+	padding: 50px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	background-color: $white;
+}
+
+.navWrapper {
+	display: flex;
+	gap: 30px;
+	justify-content: right;
+}
+
+.navLink {
+	transition: color 0.5s, text-decoration 0.3s;
+	text-decoration: underline rgba(0, 0, 0, 0);
+
+}
+
+.actionLink {
+	color: rgba(0, 0, 0, 0.568);
+	cursor: default;
+	text-decoration: none;
+
+}
+
+.noAction {
+	color: rgb(0, 0, 0);
+
+	&:hover {
+		text-decoration: underline;
+		color: rgb(0, 0, 0);
+
+	}
+}

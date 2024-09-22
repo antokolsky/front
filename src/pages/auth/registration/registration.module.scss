@@ -1,12 +1,11 @@
-.wrapper {
-	padding: 50px;
+
+.formWrapper {
 	border-radius: 30px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	background-color: $white;
 }
-
 .title {
 	text-align: center;
 }
