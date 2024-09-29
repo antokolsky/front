@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithReauth } from "./baseQueryWithAuth";
-import {  LogOnToken, TokenObtainPair, UserCreate } from "@/types/dto";
+import {  LogOnToken, TokenObtainPair, User, UserCreate } from "@/types/dto";
 
 import {
 	
@@ -14,7 +14,7 @@ export const apiSlice = createApi({
 	// The "endpoints" represent operations and requests for this server
 
 	endpoints: (builder) => ({
-		userCreat: builder.mutation<UserCreate, UserCreate>({
+		userCreat: builder.mutation<User,UserCreate >({
 			query: (initialUser) => ({
 				url: "/russian/users/",
 				data: initialUser,
@@ -23,9 +23,9 @@ export const apiSlice = createApi({
 			
 		}),
 		logToken: builder.query<TokenObtainPair, LogOnToken>({
-			query: (authorization) => ({
+			query: (logOnToken) => ({
 				url: "/auth/get_token/",
-				data: authorization,
+				data: logOnToken,
 				method: "POST",
 				
 			}),
@@ -43,7 +43,17 @@ export const apiSlice = createApi({
 					url:"/russian/projects/",
 				})
 			}
+		),
+		getMyUser: builder.query<User,string>(
+			{
+				query:( authorization)=>{
+					
+			return	({
+					url:"/russian/users/me/",
+					headers:{Authorization:`Bearer ${authorization}`}
+				})}
+			}
 		)
 	}),
 });
-export const { useUserCreatMutation, useLazyLogTokenQuery,useGetProjectsQuery } = apiSlice;
+export const { useUserCreatMutation, useLazyLogTokenQuery,useGetProjectsQuery,useGetMyUserQuery } = apiSlice;

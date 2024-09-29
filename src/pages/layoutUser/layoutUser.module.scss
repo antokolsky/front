@@ -1,0 +1,25 @@
+.wrapper{
+    margin:100px auto;
+    max-width: 1400px;
+    padding: 0 100px;
+    box-sizing: content-box;
+}
+
+.listLink{
+    display: flex;
+    gap: 20px;
+}
+.naveLinkActive{
+    color: rgb(0, 0, 0);
+    @include  a(24px)
+   
+}
+.naveLinkNoActive{
+    color: rgba(0, 0, 0, 0.674);
+    @include  a(24px);
+    &:hover{
+    color: rgb(0, 0, 0);
+
+    }
+
+}

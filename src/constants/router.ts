@@ -2,37 +2,56 @@
  * Маршруты роута
  */
 export const PATH = {
-	/**
-	 * Главная страница: "/"
-	 */
 	MAIN: {
+		/**
+		 * Главная страница: "/"
+		 */
 		MAIN: "/",
 		USERS: {
-			USERS:"/users",
+			/**
+			 * Страница авторов: "/users"
+			 */
+			USERS: "/users",
+			/**
+			 * Страница автора: "/users/:userId"
+			 */
 			USER: "/users/:userId",
-			MYPROJECTS: "/users/:userId/myProjects",
-			CREATPROJECT: "/users/:userId/myProjects/creatProject"
+			/**
+			 * Страница изменения автора: "/users/:userId/editUser"
+			 */
+			EDITUSER: "/users/:userId/editUser",
+			PROJECTS: {
+				/**
+				 * Страница моих проектов: "/users/:userId/projects"
+				 */
+				PROJECTS: "/users/:userId/projects",
+			},
 		},
-		PROJETS: { 
-			PROJETS: "/projects",
-			PROJECT: "/projects/:projectId"
+		PROJECTS: {
+			PROJECTS: "/projects",
+			PROJECT: "/projects/:projectId",
+			/**
+			 * Страница изменения проекта: "/users/:userId/projects/:projectId/editProject"
+			 */
+			EDITPROJECT: "/projects/:projectId/editProject",
+			/**
+			 * Страница создания проекта: "/users/:userId/projects/creatProject"
+			 */
+			CREATPROJECT: "/projects/creatProject",
 		},
-		AUTHORS: "/authors",
 	},
 
 	/**
 	 * Страница авторизации: "/auth"
 	 */
 	AUTH: {
-		AUTH:"/auth",
+		AUTH: "/auth",
 		/**
-	 * Страница регистрации: "/registration"
-	 */
-		REGISTRATION: "/auth/registration"
-
+		 * Страница регистрации: "/registration"
+		 */
+		REGISTRATION: "/auth/registration",
 	},
 
-	
 	/**
 	 * Страница для отладки компонентов: "/test"
 	 */

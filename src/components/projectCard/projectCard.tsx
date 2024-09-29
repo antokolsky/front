@@ -24,7 +24,7 @@ const ProjectCard = (props: Props) => {
 	const cstyle = cn(style.card, className);
     const contaner=cn(style.contaner)
     const typograph=cn(style.typograph)
-    const pathUser=generatePath(PATH.MAIN.PROJETS.PROJECT,{projectId:String(aboutDe.id)})
+    const pathUser=generatePath(PATH.MAIN.PROJECTS.PROJECT,{projectId:String(aboutDe.id)})
 
 
 

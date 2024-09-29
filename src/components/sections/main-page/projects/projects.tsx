@@ -27,10 +27,10 @@ const Projects: FC<Props> = (props) => {
 
 	return (
 		<div className={projectsCn} {...rest}>
-			<h3 className={headerCn}><Link to={PATH.MAIN.PROJETS.PROJETS}>Работы авторов</Link></h3>
+			<h3 className={headerCn}><Link to={PATH.MAIN.PROJECTS.PROJECTS}>Работы авторов</Link></h3>
 			<ProjectsCards data={getData(6)} type="previe" />
 			{/* TODO: может перейти только если авторизован navigate(PATH.MAIN.PROFILE.CREATPROJECT)*/}
-			<Button variant="x2" onClick={()=>navigate(PATH.MAIN.USERS.CREATPROJECT)} className={positionButtonCn}>Загрузить работу</Button>
+			<Button variant="x2" onClick={()=>navigate(PATH.MAIN.PROJECTS.CREATPROJECT)} className={positionButtonCn}>Загрузить работу</Button>
 		</div>
 	);
 };

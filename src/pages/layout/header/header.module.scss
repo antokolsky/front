@@ -29,7 +29,16 @@
 	}
 }
 
+.rowAutorization{
+	display: flex;
+	gap: 20px;
+}
 .link {
 	@include a(20px);
 	color: $white;
+}
+.buttonExit{
+	background-color: unset;
+	border:unset;
+	cursor: pointer;
 }

@@ -3,7 +3,7 @@ import type { BaseQueryFn } from "@reduxjs/toolkit/query";
 import type { AxiosRequestConfig } from "axios";
 import { axiosBaseQuery } from "./axiosBaseQuery";
 import {
-	loggedOut,
+	logedOut,
 	selectToken,
 	tokenReceived,
 } from "@/store/slices/authorization-slice";
@@ -61,7 +61,7 @@ export function baseQueryWithReauth(baseUrl: string): BaseQueryFn<
 					extraOptions
 				);
 			} else {
-				api.dispatch(loggedOut());
+				api.dispatch(logedOut());
 			}
 		}
 		return result;

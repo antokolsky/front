@@ -22,7 +22,7 @@ export const authorizationSlice = createSlice({
 			state.token = action.payload;
 			localStorage.setItem("token",JSON.stringify(action.payload))
 		},
-		loggedOut:(state) => {
+		logedOut:(state) => {
 			state.token=null
 			localStorage.removeItem("token")
 
@@ -30,7 +30,7 @@ export const authorizationSlice = createSlice({
 	},
 });
 
-export const {  tokenReceived,loggedOut } = authorizationSlice.actions;
+export const {  tokenReceived,logedOut } = authorizationSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectToken = (state: RootState) => state.authorization.token;
