@@ -7,6 +7,8 @@ export const PATH = {
 		 * Главная страница: "/"
 		 */
 		MAIN: "/",
+		/**Страница Справка "/helper"*/
+		HELPER:"/helper",
 		USERS: {
 			/**
 			 * Страница авторов: "/users"

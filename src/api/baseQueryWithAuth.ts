@@ -26,7 +26,7 @@ export function baseQueryWithReauth(baseUrl: string): BaseQueryFn<
 	const baseQuery = axiosBaseQuery({ baseUrl: baseUrl });
 
 	return async (args, api, extraOptions) => {
-		const state = api.getState() as RootState;
+		let state = api.getState() as RootState;
 
 		let token = selectToken(state);
 		let result = await baseQuery(args, api, extraOptions);
@@ -49,8 +49,12 @@ export function baseQueryWithReauth(baseUrl: string): BaseQueryFn<
 			if (tokenNew) {
 				// store the new token
 				api.dispatch(tokenReceived(tokenNew));
-
-				token = selectToken(state);
+				
+				state = api.getState() as RootState;
+				
+				token = selectToken( state);
+			
+				
 				// retry the initial query
 				result = await baseQuery(
 					{

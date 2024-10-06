@@ -26,6 +26,7 @@ export const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route>
 			<Route path={PATH.MAIN.MAIN} element={<Layout />}>
+				<Route path={PATH.MAIN.HELPER} element={<h1>Справка по загрузке странице</h1>}/>
 				<Route element={<MainPage />} index={true} />
 				<Route
 					path={PATH.MAIN.PROJECTS.PROJECTS}
