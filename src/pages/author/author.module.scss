@@ -1,3 +1,22 @@
+.wrapper {
+    background-color: #F7F7F7;
+    padding-top: 42px;
+    margin-top: 55px;
+    padding-left: 35px;
+}
+
+.title {
+    margin-bottom: 46px;
+
+}
+
+.wrapperHeader {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 57px 74px 10px;
+}
+
 .link {
     color: blue;
     text-decoration: underline;
@@ -5,6 +24,71 @@
 
 
 .form {
-display: grid;
-grid-template-columns: 2fr 2fr;
+    display: flex;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+
+    & input[type=file] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+}
+
+.col{
+    margin-left: 52px;
+    display: flex;
+    flex-direction: column;
+}
+.grid{
+    display: flex;
+}
+.gridRight{
+    margin-left: 133px;
+    width: 410px;
+    color: #621B44;
+}
+.itemBox{
+    display: flex;
+}
+
+.itemLabel{
+font-size: 18px;
+font-weight: 400;
+text-align: left;
+color: #837F7F;
+width: 170px;
+margin-right: 101px;
+
+}
+
+.itemInput{
+height: 29px;
+padding-left: 10px;
+margin-top: 10px;
+}
+.itemInputXs{
+    width: 93px;
+}
+.itemInputSm{
+    width: 140px;
+}
+.itemInputMedium{
+    width: 347px;
+}
+.itemInputBig{
+    width: 839px;
+    height: 119px;
+
+}
+.submit{
+    margin-top: 30px;
+    width: 209px;
+    height: 60px;
 }
