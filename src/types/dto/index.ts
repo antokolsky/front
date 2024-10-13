@@ -15,4 +15,4 @@ export * from "./TokenObtainPair";
 export * from "./TokenRefresh";
 export * from "./TokenVerify";
 export * from "./StaticPage";
-export * from "./LogOnToken";
+export * from "./LogOnUser";

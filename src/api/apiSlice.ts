@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithReauth } from "./baseQueryWithAuth";
-import {  LogOnToken, TokenObtainPair, User, UserCreate } from "@/types/dto";
+import {  LogOnUser, TokenObtainPair, User, UserCreate } from "@/types/dto";
 
 import {
 	
@@ -22,7 +22,7 @@ export const apiSlice = createApi({
 			}),
 			
 		}),
-		logToken: builder.query<TokenObtainPair, LogOnToken>({
+		logToken: builder.query<TokenObtainPair, LogOnUser>({
 			query: (logOnToken) => ({
 				url: "/auth/get_token/",
 				data: logOnToken,
