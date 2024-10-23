@@ -99,10 +99,10 @@ backdrop-filter: blur(1px);
 display: flex;
 margin-top: 151px;
 align-items: center;
-gap: 20px;
+padding: 0 85px;
+position: relative;
 }
 .wrapperPaginationCarusel{
-    width: 100%;
     height: 292px;
     overflow: hidden;
     margin: 0 auto;
@@ -124,6 +124,8 @@ transition: transform 250ms ease-in-out;
     background-size: contain;
     background-repeat: no-repeat;
 
+    position: absolute;
+    left: 0;
   
 }
 .caruselPaginationRightVector{
@@ -132,6 +134,16 @@ transition: transform 250ms ease-in-out;
     height: 130px;
     background-size: contain;
     background-repeat: no-repeat;
+    position: absolute;
     
+    right: 0;
 
+}
+
+.buttonCarusel{
+    cursor: pointer;
+    transition: transform 250ms ;
+    &:hover{
+        transform: scale(1.5);
+    }
 }

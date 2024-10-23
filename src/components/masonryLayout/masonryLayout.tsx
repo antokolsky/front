@@ -1,4 +1,3 @@
-import cn from "classnames";
 import style from "./masonryLayout.module.scss";
 import {
 	FC,
@@ -13,40 +12,27 @@ interface Props
 		DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 	> {
 
-	columnGap:number
-	rowGap:number
-	sort: Project[][]
-	onLoadImg: () => void
-	loadImg:boolean
-	refCard:(ele: HTMLDivElement | null,i:number) => void
+	
+	data: Project[];
 }
 
 const MasonryLayout: FC<Props> = (props) => {
-	const { className,sort, columnGap, rowGap,onLoadImg,refCard,loadImg, ...rest } = props;
+	const { data,...rest } = props;
 
-	const masonryColumnCn = cn(style.column, className);
-	const masonryRowCn = cn(style.row, className);
-
-	///скрываю элемент на время загрузки фотографии
-	const visible:React.CSSProperties=loadImg?{visibility:"visible",position:"unset"}:{visibility:"hidden",position:"absolute"}
-	
 	return (
-		<section className={masonryColumnCn} style={{columnGap:columnGap,...visible}} {...rest}>
-			{sort.map((column) => {
-				return <div className={masonryRowCn} style={{rowGap:rowGap}}>
-					{column.map((project,i) => {
+		<div className={style.mansory} {...rest}>
+			
+					{data.map((project) => {
 					return (
 						<Card
 							aboutDe={project}
 							key={project.id}
-							onLoadImg={onLoadImg}
-							refCard={(ele)=>{refCard(ele,i)}}
+							
 						/>
 					);
 				})}
-				</div>;
-			})}
-		</section>
+			
+		</div>
 	);
 };
 export default MasonryLayout;

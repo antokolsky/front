@@ -15,12 +15,10 @@ interface Props
 		>
 	> {
 	aboutDe: Project
-	refCard:(ele:HTMLDivElement|null) =>void
-	onLoadImg:()=>void
 }
 
 const ProjectCard = (props: Props) => {
-	const { aboutDe, className,onLoadImg,refCard ,...rest } = props;
+	const { aboutDe, className ,...rest } = props;
 	const cstyle = cn(style.card, className);
     const contaner=cn(style.contaner)
     const typograph=cn(style.typograph)
@@ -29,11 +27,11 @@ const ProjectCard = (props: Props) => {
 
 
 	return (
-		<div className={cstyle} ref={refCard}   {...rest}>
+		<div className={cstyle}  {...rest}>
 
 		{/* TODO: Если фото не сделают обязательным сделать скелет временое решение aboutDe.photos??"" */}
 				
-				<Img   src={aboutDe.photos??""} type="card" onLoad={onLoadImg}/>
+				<Img   src={aboutDe.photos??""} type="card" />
 			
             <div  className={contaner}>
                 <h5 className={typograph}><Link to={pathUser}>{aboutDe.name}</Link></h5>

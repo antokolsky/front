@@ -4,6 +4,8 @@
     max-width: 330px;
      box-sizing: border-box;
     width: 330px;
+    break-inside: avoid;
+    margin-bottom: 20px;
 }
 .contaner{
     margin-top: 10px;

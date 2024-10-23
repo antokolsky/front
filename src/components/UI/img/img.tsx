@@ -23,7 +23,7 @@ const Img: FC<Props> = (props) => {
 	const cstyle = cn(style[type], className);
 
    return (
-        <img src={src} alt="Изображение" className={cstyle} onLoad={()=>{console.log(5)}} {...rest} />
+        <img src={src} alt="Изображение" className={cstyle}  {...rest} />
    )
 };
 
