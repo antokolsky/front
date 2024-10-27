@@ -3,6 +3,7 @@
     margin: 78px auto 140px;
     padding: 0 78px;
     box-sizing: content-box;
+  
 }
 .heading{
 
@@ -12,4 +13,35 @@
 }
 .hrHeader{
     margin:46px 0 120px
+}
+.marginTop{
+    margin-top: 247px;
+}
+.descriptionProject{
+    padding-right: 240px;
+}
+.itemDescriptionWrapper{
+    display: flex;
+    border-bottom: 1px solid #797474;
+    min-height: 195px;
+}
+.headingItemDescription{
+    width: 243px;
+    flex-shrink: 0;
+}
+.wrapperButton{
+    margin-left: auto;
+    display: flex;
+    justify-content: right;
+    margin-top: 241px;
+    padding-right: 120px;
+}
+.instruktionPlaceProject{
+    height: 401px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url("/src/assets/images/banerImageInstruktion.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color;
 }
