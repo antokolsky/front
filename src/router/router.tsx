@@ -21,12 +21,13 @@ import { AuthorProjects } from "@/pages/authorProjects/authorProjects";
 import { CreatProject } from "@/pages/creatProject/creatProject";
 import { EditProject } from "@/pages/editProject/editProject";
 import { Project } from "@/pages/project/project";
+import { HelperCreateProject } from "@/pages/helperCreateProject/helperCreateProject";
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route>
 			<Route path={PATH.MAIN.MAIN} element={<Layout />}>
-				<Route path={PATH.MAIN.HELPER} element={<h1>Справка по загрузке странице</h1>}/>
+				<Route path={PATH.MAIN.HELPER} element={<HelperCreateProject/>}/>
 				<Route element={<MainPage />} index={true} />
 				<Route
 					path={PATH.MAIN.PROJECTS.PROJECTS}
